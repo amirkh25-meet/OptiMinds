@@ -91,6 +91,8 @@ We've made every effort to implement all the main aspects of the Optiminds proto
 
 **Roadmap**: In the future we are planning to host therpist-patient meetings on the application with the collaboration with professional mental health centers accross the region
 
+In addition to personalizing the app so that clincs can track the progress of the patients and give them recommendations accordingly
+
 **Upcoming Features**:
 1. **Push Notifications**
    - **Feature:** Notify users about important events like new posts, achievements, or streak progress.
