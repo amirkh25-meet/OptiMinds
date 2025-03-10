@@ -4,16 +4,16 @@
 [![Build Status](https://travis-ci.org/joemccann/dillinger.svg?branch=master)](https://travis-ci.org/joemccann/dillinger)
 
 # Table of Contents
-1. [About](#about)
-2. [How to build](#how-to-build)
-3. [Features](#features)
-4. [Feedback](#feedback)
-5. [Future Roadmap & Upcoming Features](#future-roadmap--upcoming-features)
-6. [Developer Credits & Contributions](#developer-credits--contributions)
+1. [About](#-about)
+2. [How to build](#-how-to-build)
+3. [Features](#-features)
+4. [Feedback](#-feedback)
+5. [Future Roadmap & Upcoming Features](#-future-roadmap--upcoming-features)
+6. [Developer Credits & Contributions](#-developer-credits--contributions)
 
 
 
-## 🚀 About
+## 🚀 About 
 ___
 **Optiminds** is a meet 2025 startup that primarly focuses on the problem of the effect of war on the mental health of teenagers between the ages 10 - 16 in the Palestinian/Israeli Region .
 This Application is designed to tackle this problem as it offers a modern way of playing interactive games and educative content in order to improve their mental health and enhance their understanding of the problem they are facing .
