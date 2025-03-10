@@ -8,8 +8,8 @@
 2. [How to build](#-how-to-build)
 3. [Features](#-features)
 4. [Feedback](#-feedback)
-5. [Future Roadmap & Upcoming Features](#-future-roadmap--upcoming-features)
-6. [Developer Credits & Contributions](#-developer-credits--contributions)
+5. [Future Roadmap & Upcoming Features](#future-roadmap--upcoming-features)
+6. [Developer Credits & Contributions](#developer-credits--contributions)
 
 
 
@@ -123,3 +123,5 @@ I want to express my gratitude to all the people who supported me during this jo
  - Developers Team
 
 Thank you and I hope this greateness moves on for the summer
+
+[Back To Top]("table-of-contents")
