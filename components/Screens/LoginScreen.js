@@ -7,7 +7,7 @@ import * as yup from "yup";
 import { account } from "../DataBases/appwrite.js";
 import { useNavigation, StackActions } from '@react-navigation/native';
 import { useState } from 'react';
-import Ionicons from '@expo/vector-icons/Ionicons'; // Install if not already installed
+import Ionicons from '@expo/vector-icons/Ionicons';
 import { Header } from "../Header";
 import { Button } from "../Buttons";
 

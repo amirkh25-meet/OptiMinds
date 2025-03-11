@@ -144,8 +144,6 @@ export function AppStackScreen() {
       <AppStack.Screen name="Home" component={HomeScreen} options={{ headerShown: false }} />
       <AppStack.Screen name="Clinics" component={ClinicsScreen} options={{ headerShown: false }} />
       <AppStack.Screen name="Welcome" component={Welcome} options={{ headerShown: false }} />
-      {/* <AppStack.Screen name='Community' component={CommunityScreen} /> */}
-      {/* Add other screens that might not be part of the tab navigator */}
     </AppStack.Navigator>
   );
 }
@@ -260,33 +258,3 @@ const styles = StyleSheet.create({
 });
 
 export default App;
-
-  // const [isLoading, setIsLoading] = useState(true);
-  // const [userSession, setUserSession] = useState(null);
-
-  // // Check for existing user session on app load
-  // useEffect(() => {
-  //   const checkSession = async () => {
-  //     try {
-  //       const user = await account.get();
-  //       console.log("Found existing user session:", user.name);
-  //       setUserSession(user);
-  //     } catch (error) {
-  //       console.log("No session found:", error.message);
-  //       setUserSession(null);
-  //     } finally {
-  //       setIsLoading(false);
-  //     }
-  //   };
-  //   checkSession();
-  // }, []);
-
-  // if (isLoading) return null;
-
-  // return (
-  //   <GestureHandlerRootView style={{ flex: 1 }}>
-  //     <NavigationContainer ref={navigationRef}>
-  //       {userSession ? <AppStackScreen /> : <AuthStackScreen />}
-  //     </NavigationContainer>
-  //   </GestureHandlerRootView>
-  // );
