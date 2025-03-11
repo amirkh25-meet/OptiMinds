@@ -1,4 +1,5 @@
 import React from "react";
+import { useContext } from "react";
 import { View, Text, TextInput, TouchableOpacity, StyleSheet } from "react-native";
 import { useForm, Controller } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
@@ -17,8 +18,6 @@ const schema = yup.object().shape({
   password: yup.string().required("Password is required"),
 });
 
-  
-
 const LoginScreen = ({ }) => {
   const navigation = useNavigation();
   
@@ -26,26 +25,20 @@ const LoginScreen = ({ }) => {
     resolver: yupResolver(schema),
   });
 
+
   const onSubmit = async (data) => {
-
-
     try {
-      // new session is created
-    const session = await account.createEmailPasswordSession(data.email, data.password)
-      console.log("Success", "Login Successful!");
-      return <AppStackScreen />;
-      // navigation.dispatch(StackActions.replace('Main'));
-      // navigation.replace('Main');
-      // .dispatch(
-      //     CommonActions.reset({
-      //       index: 0,
-      //       routes: [{ name: "Main" }],
-      //     })
-      //   )
-
-      // navigation.navigate("Home"); // Navigate to home screen
+      const session = await account.createEmailPasswordSession(data.email, data.password);
+      const user = await account.get();
+      // console.log("Login successful, userID:", user.$id);
+      setTimeout(() => {
+        navigation.dispatch(StackActions.replace("Main"));
+      }, 500);
+      // console.log("Navigating to Main...");
+      // console.log("Current Navigation State:", navigation.getState());
     } catch (error) {
-      console.log("Login Failed", error.message);
+      // console.log("Login Failed", error.message);
+      return { success: false, error: error.message };
     }
   };
   // to show the password

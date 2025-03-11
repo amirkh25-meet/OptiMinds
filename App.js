@@ -56,7 +56,7 @@ const HomeScreen = () => {
   const handleLogout = async () => {
     try {
       await account.deleteSession("current");
-      navigation.replace("Welcome");
+      navigation.replace("Welcome") ;
     } catch (error) {
       console.log("Logout error:", error);
     }
@@ -93,6 +93,7 @@ function AuthStackScreen() {
       <AuthStack.Screen name="Welcome" component={Welcome}  options={{ headerShown: false }} />
       <AuthStack.Screen name="Sign-up" component={SignupScreen}  options={{ headerShown: false }} />
       <AuthStack.Screen name="Login" component={LoginScreen} options={{ headerShown: false }} />
+      <AppStack.Screen name="Main" component={AppTabs} options={{ headerShown: false }} />
     </AuthStack.Navigator>
   );
 }
@@ -136,20 +137,20 @@ const AppStack = createNativeStackNavigator();
 
 export function AppStackScreen() {
   return (
-    <AppStack.Navigator>
+    <AppStack.Navigator initialRouteName='Main'>
       <AppStack.Screen name="Main" component={AppTabs} options={{ headerShown: false }} />
-      <AppStack.Screen name="Sign-up" component={SignupScreen} />
-      <AppStack.Screen name="Login" component={LoginScreen} />
-      <AppStack.Screen name="Home" component={HomeScreen} />
-      <AppStack.Screen name="Clinics" component={ClinicsScreen}  />
-      <AppStack.Screen name="Welcome" component={Welcome} />
+      <AppStack.Screen name="Sign-up" component={SignupScreen} options={{ headerShown: false }} />
+      <AppStack.Screen name="Login" component={LoginScreen } options={{ headerShown: false }}/>
+      <AppStack.Screen name="Home" component={HomeScreen} options={{ headerShown: false }} />
+      <AppStack.Screen name="Clinics" component={ClinicsScreen} options={{ headerShown: false }} />
+      <AppStack.Screen name="Welcome" component={Welcome} options={{ headerShown: false }} />
       {/* <AppStack.Screen name='Community' component={CommunityScreen} /> */}
       {/* Add other screens that might not be part of the tab navigator */}
     </AppStack.Navigator>
   );
 }
 
-// Root Component
+
 const App = () => {
   const [isLoading, setIsLoading] = useState(true);
   const [userSession, setUserSession] = useState(null);
@@ -181,6 +182,7 @@ const App = () => {
     </GestureHandlerRootView>
   );
 };
+
 
 const styles = StyleSheet.create({
   container: {
@@ -259,3 +261,32 @@ const styles = StyleSheet.create({
 
 export default App;
 
+  // const [isLoading, setIsLoading] = useState(true);
+  // const [userSession, setUserSession] = useState(null);
+
+  // // Check for existing user session on app load
+  // useEffect(() => {
+  //   const checkSession = async () => {
+  //     try {
+  //       const user = await account.get();
+  //       console.log("Found existing user session:", user.name);
+  //       setUserSession(user);
+  //     } catch (error) {
+  //       console.log("No session found:", error.message);
+  //       setUserSession(null);
+  //     } finally {
+  //       setIsLoading(false);
+  //     }
+  //   };
+  //   checkSession();
+  // }, []);
+
+  // if (isLoading) return null;
+
+  // return (
+  //   <GestureHandlerRootView style={{ flex: 1 }}>
+  //     <NavigationContainer ref={navigationRef}>
+  //       {userSession ? <AppStackScreen /> : <AuthStackScreen />}
+  //     </NavigationContainer>
+  //   </GestureHandlerRootView>
+  // );
