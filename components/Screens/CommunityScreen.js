@@ -50,7 +50,7 @@ const CommunityScreen = () => {
 
     try {
       const user = await account.get();
-      console.log(user);
+      // console.log(user);
       // creates the achievement
       await databases.createDocument(
         '67b39a85001c96f3a9b8',

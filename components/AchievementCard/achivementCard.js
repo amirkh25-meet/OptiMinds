@@ -46,7 +46,7 @@ const AchievementCard = ({ achievement }) => {
         }
       );
 
-      console.log("Celebration count updated!");
+      // console.log("Celebration count updated!");
     } catch (error) {
       console.error("Error updating celebrations:", error);
       setCelebrations((prev) => prev - 1);

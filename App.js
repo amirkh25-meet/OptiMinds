@@ -158,7 +158,7 @@ const App = () => {
     const checkSession = async () => {
       try {
         const user = await account.get();
-        console.log("Found existing user session:", user.name);
+        // console.log("Found existing user session:", user.name);
         setUserSession(user);
       } catch (error) {
         console.log("No session found:", error.message);
